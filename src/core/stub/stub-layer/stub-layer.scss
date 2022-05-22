@@ -1,0 +1,50 @@
+.stub-layer {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-color: red;
+  left: 0;
+  top: 0;
+
+  .stub-layout {
+    position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font: bold 100px sans-serif;
+    text-align: center;
+    color: #fff;
+  }
+
+}
+
+.native-buttons-layer {
+
+  .system-settings {
+
+    position: fixed;
+    bottom: 100px;
+    right: 60px;        
+  
+    > div {
+      height: calc(90px * var(--virtual-view-scale));
+      width: calc(90px * var(--virtual-view-scale));
+      margin-top: calc(50px * var(--virtual-view-scale));
+      background-size: contain;
+    }
+  
+    .toggle-sound {      
+      background-image: url("./assets/toggle-sound.png");
+    }
+  
+    .toggle-camera {
+      background-image: url("./assets/toggle-camera.png");
+    }
+  }
+
+}
+
+.hidden {
+  visibility: hidden;
+}

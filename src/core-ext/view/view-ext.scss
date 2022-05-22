@@ -1,0 +1,12 @@
+//Override styles of view to match with the game
+
+.view {
+  background-color: #4a4ac4 !important;
+}
+
+
+body.view-overlay {
+  &::after {
+    background-color: #6fc44a !important;
+  }
+}

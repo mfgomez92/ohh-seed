@@ -1,0 +1,17 @@
+@import 'global/variables';
+@import './core-ext/view/view-ext.scss';
+
+body {
+    margin: 0;
+}
+
+/* floraless-normal - latin */
+@font-face {
+    font-family: 'Floraless';
+    font-style: normal;
+    font-weight: normal;
+    src: url('assets/fonts/preload/Floraless.ttf'); /* IE9 Compat Modes */
+    src: local('Floraless Normal'), local('Floraless-Normal'),
+    url('assets/fonts/preload/Floraless.ttf')
+}
+

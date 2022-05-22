@@ -1,0 +1,23 @@
+.test-leaderboard-pre-view {
+
+  .container {
+    width: 100%;
+    height: 70%;
+    top: 30%;
+  }
+  
+  .view-title {
+    font-size: 60px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    margin-top: 300px;
+  }
+
+  button {
+    font-size: 60px;
+    margin-left: 50%;
+    margin-top: 300px;
+    transform: translateX(-50%);
+  }
+}

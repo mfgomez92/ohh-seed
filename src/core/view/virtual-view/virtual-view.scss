@@ -1,0 +1,20 @@
+:root {
+  --virtual-view-width:980px;
+  --virtual-view-height:2122px;
+  --virtual-view-scale:1px;
+}
+
+
+.virtual-view-container {
+  position:absolute;
+  left: 0;
+  top:0;
+  width: var(--virtual-view-width);
+  height: var(--virtual-view-height);
+  transform: scale(var(--virtual-view-scale));
+  transform-origin: 50% 0%;
+
+  div {
+    position: absolute;
+  }
+}

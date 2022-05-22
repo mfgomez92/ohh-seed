@@ -1,0 +1,94 @@
+.view {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #272728;
+
+  &.fade-out {
+    animation: fade-out-animation 0.5s ease 0.2s both;
+  }
+  &.fade-in {
+    animation: fade-in-animation 0.5s ease both;
+  }
+
+  .go-back-button {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    left: 20px;
+    top: 60px;
+    background-image: url("./assets/preload/back-btn.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    z-index: 9;
+  }
+
+}
+
+.d-none {
+  display: none !important;
+}
+
+.hidden {
+  visibility: hidden !important;
+}
+
+
+@keyframes fade-out-animation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fade-in-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+body.view-overlay {
+
+  &::after {
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    background-color: #272728;
+    display:block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    animation: view-overlay-show-animation 0.3s linear both;
+  }
+
+  &.overlay-hide::after {
+    animation: view-overlay-hide-animation 0.3s linear both;
+  }
+}
+
+@keyframes view-overlay-show-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes view-overlay-hide-animation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+

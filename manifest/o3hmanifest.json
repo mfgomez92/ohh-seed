@@ -1,0 +1,41 @@
+{
+  "title": "Try Not to Laugh",
+  "hasLevels": true,
+  "hasLeaderboard": true,
+  "creatorInputs": {},
+  "creatorOutputs": {
+    "replay": "ReplayData",
+    "cta-recording": "VideoAsset",
+    "gameplay-recording": "VideoAsset",
+    "chosen-video": "VideoAsset"
+  },
+  "creatorFeedVideo": "cta-recording",
+  "creatorReplayData": "replay",
+  "audienceInputs": {
+    "chosen-video": "VideoAsset"
+  },
+  "audienceOutputs": {
+    "gameplay-recording": "VideoAsset"
+  },
+  "audienceFeedVideo": "gameplay-recording",
+  "usesGlobalSettings": true,
+  "creatorAudienceMappings": {
+    "chosen-video": "chosen-video"
+  },
+  "permissions": {
+    "creator": {
+      "required": [
+        "usesCameraComponent",
+        "gallery"
+      ],
+      "optional": []
+    },
+    "audience": {
+      "required": [
+        "usesCameraComponent",
+        "gallery"
+      ],
+      "optional": []
+    }
+  }
+}

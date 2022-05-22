@@ -1,0 +1,59 @@
+$title-font-family: "Arial";
+
+$entry-gold-color: goldenrod;
+$entry-silver-color: silver;
+$entry-bronze-color: tan;
+$entry-font-family: "Arial";
+$entry-font-size: 50px;
+$entry-user-color: #fff;
+$entry-score-font-family: "Arial";
+$entry-score-font-size: 50px;
+
+$tag-font-size: 30px;
+$tag-font-color: #fff;
+$tag-background-color: #000;
+$tag-border-color: #fff;
+
+
+.leaderboard-component {
+    width: 100%;
+    height: 100%;
+
+    .leaderboard-container {
+        width: 100%;
+        height: 100%;
+
+        > div {
+            position: relative !important;
+        }
+
+        &.post {
+
+            .leaderboard-separator {
+                display: none;
+            }            
+
+        }
+    }
+   
+
+    .hidden {
+        visibility: hidden;
+    }
+
+    .leaderboard-separator {
+        font-size: 84px;
+        font-family: $title-font-family;
+        text-align: center;
+        color: #fff;
+        letter-spacing: 13px;
+        margin-bottom: 52px;
+    }
+
+    .leaderboard-versus {
+        
+        color: #fff;
+
+    }
+
+}

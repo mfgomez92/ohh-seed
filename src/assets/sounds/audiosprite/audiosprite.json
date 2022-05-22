@@ -1,0 +1,11 @@
+{
+  "urls": [
+    "./src/assets/sounds/audiosprite/audiosprite.mp3"
+  ],
+  "sprite": {
+    "bg-music": [
+      0,
+      152727.27891156464
+    ]
+  }
+}

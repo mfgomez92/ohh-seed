@@ -1,0 +1,19 @@
+$overlay-message-font-family: "Arial";
+$overlay-message-font-size: 50px;
+$overlay-message-font-weight: bold;
+$overlay-message-text-align: center;
+$overlay-message-color: #000;
+$overlay-message-animation-duration: 200ms;
+
+:export {
+    overlayMessageAnimationDuration: $overlay-message-animation-duration;    
+  }
+
+.overlay-messager-component {
+
+    width: 100vw;
+    height: 100vh;
+    z-index: 9;
+    position: fixed;
+ 
+}

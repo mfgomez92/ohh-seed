@@ -1,0 +1,28 @@
+.test-video-player-view {
+
+    .virtual-view-container {
+        padding-top: 300px;
+    }
+    
+    div {
+        font-size: 60px;
+        width: 100%;
+        text-align: center;
+        color: white;        
+    }
+
+    button {
+        height: 95px;
+        width: auto;
+        font-size: 43px;
+    }
+
+    .player-target {
+        width: 640px;
+        height: 480px;
+        background-color: wheat;
+        position: relative !important;
+        margin: 85px auto;
+    }
+
+}

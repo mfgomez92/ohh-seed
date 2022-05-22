@@ -1,0 +1,36 @@
+@import "../overlay-messager-component.scss";
+
+.overlay-message-component {
+
+    text-align: $overlay-message-text-align;
+    font-size: 82px;
+    font-weight: $overlay-message-font-weight;
+    font-family: $overlay-message-font-family;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: score-scale-in $overlay-message-animation-duration ease-in-out forwards; 
+
+    &.hide {
+        animation: score-scale-out .2s ease-in-out forwards;
+    }
+}
+
+@keyframes score-scale-in {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes score-scale-out {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  

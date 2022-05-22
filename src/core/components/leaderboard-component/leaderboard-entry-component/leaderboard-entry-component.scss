@@ -1,0 +1,101 @@
+@import "../leaderboard-component.scss";
+
+
+.post {
+    .leaderboard-entry-component {
+        height: 125px;
+
+        > * {
+            transform: translateY(-20px);
+        }              
+    }
+}
+
+.leaderboard-entry-component {
+    
+    position: relative !important;
+    width: 100%;
+    height: 170px;
+
+    .hidden {
+        visibility: hidden;
+    }
+
+
+    > * {
+        position: relative !important;
+        display: inline-block;
+        font-size: $entry-font-size;
+        font-family: $entry-font-family;                
+    }
+
+    &.active-user {
+        box-shadow: inset 0px 0px 0px 7px $entry-user-color;
+        z-index: -1;
+    }   
+
+    .rank {        
+        left: 60px;
+        width: 60px;
+    }
+
+    .avatar {
+        
+        height: 100px;
+        width: 100px;
+        left: 106px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .tag {
+            background-color: $tag-background-color;
+            color: $tag-font-color;
+            font-size: $tag-font-size;
+            padding: 5px 11px;
+            border: solid 2px $tag-border-color;
+            margin-top: -30px;
+            font-family: $entry-font-family;         
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+        }
+    }
+
+    .username {
+        left: 159px;
+        width: 400px;
+    }
+
+    .score {
+        left: 160px;
+        text-align: right;
+        width: 160px;
+        font-family: $entry-score-font-family;
+        font-size: $entry-score-font-size;
+    }
+}
+
+.leaderboard-podium {
+
+    .leaderboard-entry-component {
+        
+        &.gold-entry {
+            background-color: $entry-gold-color;
+        }
+    
+        &.silver-entry {
+            background-color: $entry-silver-color;
+        }
+    
+        &.bronze-entry {
+            background-color: $entry-bronze-color;
+        }
+    }
+}
