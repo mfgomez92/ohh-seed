@@ -8,6 +8,9 @@ import {TransitionType} from "../../../../core/view/view-manager";
 export default class CreatorCView extends View {
     constructor() {
         super(html);
+        this.onIntroStarts(async () => {
+            alert(this._inputData.number);
+        })
         this.$(".creator-a-view-button").onClick(this.exitWithOutput.bind(this, "creator-a-view"));
         this.$(".creator-d-view-button").onClick(this.exitWithOutput.bind(this, "creator-d-view"));
     }

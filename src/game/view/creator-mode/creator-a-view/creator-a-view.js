@@ -7,11 +7,16 @@ import {TransitionType} from "../../../../core/view/view-manager";
 export default class CreatorAView extends View {
     constructor() {
         super(html);
-        this.$(".creator-b-view-button").onClick(this.exitWithOutput.bind(this, "creator-b-view"));
+        this.$(".creator-a-view-input").addEventListener("keyup", (e) => this.setNumber(e.target.value));
+        this.$(".creator-b-view-button").onClick(this.exitWithOutput.bind(this, this.number));
+        this.number=0;
+    }
+    setNumber(value){
+        this.number = value;
     }
     exitWithOutput() {
         this.onOutroStarts(async () => {
-                return new CreatorBView().start();
+                return new CreatorBView().start({number: this.number});
             })
             .end(TransitionType.CROSS_FADE);
     }

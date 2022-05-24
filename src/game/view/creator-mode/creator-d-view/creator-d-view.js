@@ -8,10 +8,11 @@ export default class CreatorDView extends View {
     constructor() {
         super(html);
         this.$(".creator-b-view-button").onClick(this.exitWithOutput.bind(this, "creator-b-view"));
+        this.number=8;
     }
     exitWithOutput() {
         this.onOutroStarts(async () => {
-                return new CreatorBView().start();
+                return new CreatorBView().start({number: this.number});
             })
             .end(TransitionType.CROSS_FADE);
     }
