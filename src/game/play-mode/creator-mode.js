@@ -28,21 +28,23 @@ export default class CreatorMode extends PlayMode {
 }
 CreatorMode.InitialState = class extends PlayModeState {
     async process() {
-            await (new AView().start());
-            await (new CreatorMode.BState).process()
+        let output;
+        output=    await (new AView().start());
+        await (new CreatorMode.BState).process(output.getState());
     }
 }
 CreatorMode.BState = class extends PlayModeState {
-    async process() {
-        await (new BView().start());
+    async process(number) {
         let output;
-        output = await (new CView().start());
+        output = await (new BView().start({number}));
+        console.log(output.getState())
+        output = await (new CView().start({number:output.getState()}));
 
         if(output.state === "a-view") {
             await (new CreatorMode.InitialState).process()
         } else  {
-           await (new DView().start());
-           await (new CreatorMode.BState).process()
+           output =await (new DView().start());
+           await (new CreatorMode.BState).process(output.getState())
         }
     }
 }

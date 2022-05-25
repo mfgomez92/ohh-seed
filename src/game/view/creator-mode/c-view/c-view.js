@@ -9,6 +9,9 @@ export default class CView extends View {
         super(html);
         this.$(".a-view-button").onClick(this.onClick.bind(this, "a-view"));
         this.$(".d-view-button").onClick(this.onClick.bind(this, "d-view"));
+        this.onIntroStarts(async () => {
+            alert(this._inputData.number);
+        })
     }
     onClick(outputText) {
         this.onOutroEnds(async () => {
