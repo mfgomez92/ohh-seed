@@ -1,16 +1,32 @@
 .d-view {
+  position: relative;
+
+  .virtual-view-container {
+    background-color: #F05382;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
     div {
-      font-size: 60px;
-      width: 100%;
-      text-align: center;
-      color: white;
-      margin-top: 100px;
-    }
-  
-    button {
-      font-size: 60px;
-      margin-left: 50%;
-      margin-top: 200px;
-      transform: translateX(-50%);
+      position: initial;
+      width: calc(var(--virtual-view-width)/2);
+      height: calc(var(--virtual-view-height)/3);
     }
   }
+
+  button {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    padding: 40px 60px;
+  }
+
+  .translucid {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}
