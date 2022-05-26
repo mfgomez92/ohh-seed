@@ -24,7 +24,13 @@
       height: calc(var(--virtual-view-height)/3);
     }
   }
-
+  .title-view{
+    font-size: 30px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
   button {
     margin: 0;
     position: absolute;

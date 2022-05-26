@@ -4,6 +4,7 @@ import "./d-view.scss";
 import Utils from "../../../../core/utils/utils";
 import { TransitionType } from "../../../../core/view/view-manager";
 import Audio from "../../../../core/utils/audio";
+import O3h from "../../../../core/api/o3h"
 
 export default class DView extends View {
   constructor() {
@@ -15,11 +16,10 @@ export default class DView extends View {
     this.$(".original-button").onClick(() => this.toggleClass("original"));
     this.$(".orange-blue-button").onClick(() => this.toggleClass("orange-blue"));
     this.$(".sound-button").onClick(() => Audio.play("bg-music"));
-    this.onIntroStarts(() => {
-      this.onClickPromise(5);
-      this.$(".original-button")._selectedElement.disabled = true;
-      var root = document.documentElement;
-            root.style.setProperty('--theme-original', true)
+    this.onIntroStarts(async() => {
+        this.getElement(".title-view").innerText =await O3h.getInstance().getCreatorName()
+        this.onClickPromise(5);
+        this.$(".original-button")._selectedElement.disabled = true;
     });
   }
 
