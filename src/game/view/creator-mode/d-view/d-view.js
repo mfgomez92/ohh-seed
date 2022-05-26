@@ -3,6 +3,7 @@ import html from "./d-view.html";
 import "./d-view.scss";
 import Utils from "../../../../core/utils/utils";
 import { TransitionType } from "../../../../core/view/view-manager";
+import Audio from "../../../../core/utils/audio";
 
 export default class DView extends View {
   constructor() {
@@ -13,6 +14,7 @@ export default class DView extends View {
     this.$(".promise-button-7").onClick(() => this.onClickPromise(7));
     this.$(".original-button").onClick(() => this.toggleClass("original"));
     this.$(".orange-blue-button").onClick(() => this.toggleClass("orange-blue"));
+    this.$(".sound-button").onClick(() => Audio.play("bg-music"));
     this.onIntroStarts(() => {
       this.onClickPromise(5);
       this.$(".original-button")._selectedElement.disabled = true;
