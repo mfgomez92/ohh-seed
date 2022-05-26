@@ -1,8 +1,17 @@
+:root,
+:root.original {
+  --bg-color-primary: #9B79AA;
+  --bg-color-secondary: #82B366;
+}
+
+:root.orange-blue {
+  --bg-color-primary: #D79B00;
+  --bg-color-secondary: #7394C3;
+}
 .d-view {
   position: relative;
 
   .virtual-view-container {
-    background-color: #F05382;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -19,23 +28,31 @@
   button {
     margin: 0;
     position: absolute;
-    top: 20%;
+    top: 14%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 60px;
     padding: 40px 60px;
   }
   .promise-button{
-    top: 40%;
+    top: 28%;
   }
   .promise-button-5{
-    top: 60%;
+    top: 42%;
   }
   .promise-button-7{
-    top: 80%;
+    top: 56%;
   }
-
-  .translucid {
-    background-color: rgba(255, 255, 255, 0.5);
+  .original-button {
+    top: 70%;
+  }
+  .orange-blue-button {
+    top: 84%;
+  }
+  .primary{
+    background-color: var(--bg-color-primary);
+  }
+  .secondary {
+    background-color: var(--bg-color-secondary);
   }
 }
