@@ -19,11 +19,20 @@
   button {
     margin: 0;
     position: absolute;
-    top: 50%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 60px;
     padding: 40px 60px;
+  }
+  .promise-button{
+    top: 40%;
+  }
+  .promise-button-5{
+    top: 60%;
+  }
+  .promise-button-7{
+    top: 80%;
   }
 
   .translucid {
